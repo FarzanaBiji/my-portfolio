@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farzana Biji | Full-Stack Developer</title>
+  <meta name="description" content="Farzana Biji — Full-Stack Developer from Kerala, India. Open to job offers, freelance projects, and collaborations."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══════════ LOADER ══════════ -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">FB</div>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    <span class="loader-text" id="loaderText">Initializing...</span>
+  </div>
+</div>
+
+<!-- ══════════ CUSTOM CURSOR ══════════ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-bracket">{</span>
+      <span class="logo-name">FB</span>
+      <span class="logo-bracket">}</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home"     class="nav-item" data-label="01">Home</a></li>
+      <li><a href="#about"    class="nav-item" data-label="02">About</a></li>
+      <li><a href="#skills"   class="nav-item" data-label="03">Skills</a></li>
+      <li><a href="#projects" class="nav-item" data-label="04">Projects</a></li>
+      <li><a href="#contact"  class="nav-item" data-label="05">Contact</a></li>
+      <li>
+        <a href="#contact" class="nav-hire">
+          <i class="fas fa-briefcase"></i> Hire Me
+        </a>
+      </li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-progress" id="navProgress"></div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="home">
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <div class="hero-noise"></div>
+  <div class="hero-container">
+    <div class="hero-left">
+      <div class="hero-badge" data-aos="fade-down">
+        <span class="badge-pulse"></span>
+        <span>Available for opportunities</span>
+      </div>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+        <span class="title-line">Hi, I'm</span>
+        <span class="title-name">Farzana<br>Biji</span>
+      </h1>
+      <div class="hero-role" data-aos="fade-up" data-aos-delay="200">
+        <span class="role-code">&lt;</span>
+        <span class="role-typed" id="heroTyped"></span>
+        <span class="role-cursor">_</span>
+        <span class="role-code">/&gt;</span>
+      </div>
+      <p class="hero-bio" data-aos="fade-up" data-aos-delay="300">
+        I build beautiful, high-performance web applications with clean code
+        and thoughtful UX. Turning your ideas into polished digital products.
+      </p>
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+        <a href="#projects" class="btn-glow">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <i class="fas fa-paper-plane"></i>
+          <span>Hire Me</span>
+        </a>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+        <div class="hstat">
+          <span class="hstat-num" data-count="10">0</span><span>+</span>
+          <span class="hstat-lbl">Projects</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-num" data-count="5">0</span><span>+</span>
+          <span class="hstat-lbl">Tech Stacks</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-num" data-count="2">0</span><span>+</span>
+          <span class="hstat-lbl">Years Exp.</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right" data-aos="fade-left" data-aos-delay="200">
+      <div class="hero-card-wrap" id="heroCard">
+        <div class="hcard">
+          <div class="hcard-glow"></div>
+          <div class="hcard-avatar">
+            <div class="hcard-initials">FB</div>
+            <div class="hcard-status"><span></span>Open to Work</div>
+          </div>
+          <div class="hcard-info">
+            <h3>Farzana Biji</h3>
+            <p>Full-Stack Developer</p>
+            <div class="hcard-tags">
+              <span>React</span><span>Node.js</span><span>Python</span>
+            </div>
+          </div>
+          <div class="hcard-links">
+            <a href="mailto:farzanabiji23@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- floating code snippet -->
+        <div class="float-code float-code-1">
+          <span class="fc-line"><span class="fc-kw">const</span> <span class="fc-var">dev</span> = {</span>
+          <span class="fc-line">  name: <span class="fc-str">"Farzana"</span>,</span>
+          <span class="fc-line">  passion: <span class="fc-str">"coding"</span></span>
+          <span class="fc-line">};</span>
+        </div>
+        <div class="float-icon float-icon-1"><i class="fab fa-react"></i></div>
+        <div class="float-icon float-icon-2"><i class="fab fa-python"></i></div>
+        <div class="float-icon float-icon-3"><i class="fab fa-node-js"></i></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"><div class="scroll-dot"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-right">About Me</div>
+    <div class="about-grid">
+      <div class="about-visual" data-aos="fade-right" data-aos-delay="100">
+        <div class="about-img-wrap">
+          <div class="about-img-bg"></div>
+          <div class="about-img-box">
+            <div class="about-initials-big">FB</div>
+          </div>
+          <div class="about-exp-badge">
+            <span class="exp-num">2+</span>
+            <span class="exp-lbl">Years of<br>Experience</span>
+          </div>
+        </div>
+        <div class="about-tech-row">
+          <div class="about-tech-pill"><i class="fab fa-react"></i> React</div>
+          <div class="about-tech-pill"><i class="fab fa-python"></i> Python</div>
+          <div class="about-tech-pill"><i class="fab fa-node-js"></i> Node</div>
+          <div class="about-tech-pill"><i class="fas fa-database"></i> MongoDB</div>
+        </div>
+      </div>
+      <div class="about-content" data-aos="fade-left" data-aos-delay="200">
+        <h2 class="sec-title">Crafting Digital<br><em>Experiences</em></h2>
+        <p class="about-para">
+          Hi! I'm <strong>Farzana Biji</strong> — a Full-Stack Developer based in Kerala, India.
+          I'm passionate about building products that are as beautiful as they are functional.
+          My journey started with curiosity and grew into a deep love for clean architecture,
+          elegant UI, and performance-driven code.
+        </p>
+        <p class="about-para">
+          I thrive in collaborative environments, love open-source, and I'm always exploring
+          new frameworks and tools. Whether it's a pixel-perfect front end or a scalable API,
+          I bring the same level of care to every layer of the stack.
+        </p>
+        <div class="about-items">
+          <div class="about-item">
+            <div class="ai-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><span class="ai-label">Location</span><span class="ai-val">Kerala, India</span></div>
+          </div>
+          <div class="about-item">
+            <div class="ai-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div><span class="ai-label">Degree</span><span class="ai-val">Computer Science</span></div>
+          </div>
+          <div class="about-item">
+            <div class="ai-icon"><i class="fas fa-envelope"></i></div>
+            <div><span class="ai-label">Email</span><a href="mailto:farzanabiji23@gmail.com" class="ai-val ai-link">farzanabiji23@gmail.com</a></div>
+          </div>
+          <div class="about-item">
+            <div class="ai-icon"><i class="fas fa-circle-check"></i></div>
+            <div><span class="ai-label">Status</span><span class="ai-val ai-green">Open to Work</span></div>
+          </div>
+        </div>
+        <div class="about-ctas">
+          <a href="#contact" class="btn-glow">Let's Talk</a>
+          <a href="#" class="btn-ghost"><i class="fas fa-download"></i> Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section class="section skills-section" id="skills">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-right">Skills</div>
+    <div class="skills-header" data-aos="fade-up">
+      <h2 class="sec-title">My Tech <em>Arsenal</em></h2>
+      <p class="sec-sub">Technologies I use to build robust, scalable solutions</p>
+    </div>
+
+    <!-- Language bubbles marquee -->
+    <div class="marquee-wrap" data-aos="fade-up" data-aos-delay="100">
+      <div class="marquee-track">
+        <div class="marquee-item"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="marquee-item"><i class="fab fa-python"></i> Python</div>
+        <div class="marquee-item"><i class="fab fa-react"></i> React</div>
+        <div class="marquee-item"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="marquee-item"><i class="fab fa-html5"></i> HTML5</div>
+        <div class="marquee-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+        <div class="marquee-item"><i class="fab fa-git-alt"></i> Git</div>
+        <div class="marquee-item"><i class="fab fa-docker"></i> Docker</div>
+        <div class="marquee-item"><i class="fas fa-database"></i> MongoDB</div>
+        <div class="marquee-item">TS TypeScript</div>
+        <!-- duplicate for seamless loop -->
+        <div class="marquee-item"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="marquee-item"><i class="fab fa-python"></i> Python</div>
+        <div class="marquee-item"><i class="fab fa-react"></i> React</div>
+        <div class="marquee-item"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="marquee-item"><i class="fab fa-html5"></i> HTML5</div>
+        <div class="marquee-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+        <div class="marquee-item"><i class="fab fa-git-alt"></i> Git</div>
+        <div class="marquee-item"><i class="fab fa-docker"></i> Docker</div>
+        <div class="marquee-item"><i class="fas fa-database"></i> MongoDB</div>
+        <div class="marquee-item">TS TypeScript</div>
+      </div>
+    </div>
+
+    <div class="skills-grid" data-aos="fade-up" data-aos-delay="150">
+
+      <div class="skill-category tilt-card">
+        <div class="sc-header">
+          <div class="sc-icon"><i class="fas fa-desktop"></i></div>
+          <h3>Frontend</h3>
+        </div>
+        <div class="sc-list">
+          <div class="sc-item"><div class="sci-info"><span>HTML5 / CSS3</span><span>95%</span></div><div class="sci-bar"><div class="sci-fill" data-w="95" style="--c:#e34c26"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>JavaScript ES6+</span><span>88%</span></div><div class="sci-bar"><div class="sci-fill" data-w="88" style="--c:#f7df1e"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>React / Next.js</span><span>85%</span></div><div class="sci-bar"><div class="sci-fill" data-w="85" style="--c:#61dafb"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>TypeScript</span><span>78%</span></div><div class="sci-bar"><div class="sci-fill" data-w="78" style="--c:#3178c6"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>Tailwind CSS</span><span>90%</span></div><div class="sci-bar"><div class="sci-fill" data-w="90" style="--c:#38bdf8"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-category tilt-card">
+        <div class="sc-header">
+          <div class="sc-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend</h3>
+        </div>
+        <div class="sc-list">
+          <div class="sc-item"><div class="sci-info"><span>Node.js / Express</span><span>82%</span></div><div class="sci-bar"><div class="sci-fill" data-w="82" style="--c:#339933"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>Python / FastAPI</span><span>80%</span></div><div class="sci-bar"><div class="sci-fill" data-w="80" style="--c:#3776ab"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>MongoDB</span><span>75%</span></div><div class="sci-bar"><div class="sci-fill" data-w="75" style="--c:#47a248"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>PostgreSQL</span><span>72%</span></div><div class="sci-bar"><div class="sci-fill" data-w="72" style="--c:#336791"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>Firebase</span><span>78%</span></div><div class="sci-bar"><div class="sci-fill" data-w="78" style="--c:#ff9800"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skill-category tilt-card">
+        <div class="sc-header">
+          <div class="sc-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools & DevOps</h3>
+        </div>
+        <div class="sc-list">
+          <div class="sc-item"><div class="sci-info"><span>Git / GitHub</span><span>90%</span></div><div class="sci-bar"><div class="sci-fill" data-w="90" style="--c:#f05032"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>Docker</span><span>65%</span></div><div class="sci-bar"><div class="sci-fill" data-w="65" style="--c:#2496ed"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>Figma / UI Design</span><span>75%</span></div><div class="sci-bar"><div class="sci-fill" data-w="75" style="--c:#a855f7"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>AWS Basics</span><span>60%</span></div><div class="sci-bar"><div class="sci-fill" data-w="60" style="--c:#ff9900"></div></div></div>
+          <div class="sc-item"><div class="sci-info"><span>REST / GraphQL APIs</span><span>82%</span></div><div class="sci-bar"><div class="sci-fill" data-w="82" style="--c:#e535ab"></div></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Language chips -->
+    <div class="lang-section" data-aos="fade-up" data-aos-delay="200">
+      <p class="lang-title">Programming Languages I speak</p>
+      <div class="lang-chips">
+        <div class="lang-chip" style="--cc:#f7df1e"><span class="lc-dot"></span>JavaScript</div>
+        <div class="lang-chip" style="--cc:#3776ab"><span class="lc-dot"></span>Python</div>
+        <div class="lang-chip" style="--cc:#3178c6"><span class="lc-dot"></span>TypeScript</div>
+        <div class="lang-chip" style="--cc:#b07219"><span class="lc-dot"></span>Java</div>
+        <div class="lang-chip" style="--cc:#555555"><span class="lc-dot"></span>C / C++</div>
+        <div class="lang-chip" style="--cc:#f05138"><span class="lc-dot"></span>Dart</div>
+        <div class="lang-chip" style="--cc:#4479a1"><span class="lc-dot"></span>SQL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section class="section projects-section" id="projects">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-right">My Projects</div>
+    <div class="projects-header" data-aos="fade-up">
+      <h2 class="sec-title">Things I've <em>Built</em></h2>
+      <p class="sec-sub">A selection of my academic and development projects</p>
+    </div>
+
+    <div class="projects-grid projects-grid-two">
+      <div class="proj-card tilt-card" data-aos="fade-up" data-aos-delay="100" style="--pc:#22d3ee">
+        <div class="pc-top">
+          <div class="pc-emoji">📋</div>
+          <div class="pc-links">
+            <a href="https://github.com/FarzanaBiji/Employee-Attendance-Management-System" target="_blank" rel="noopener noreferrer" aria-label="View Employee Attendance Management System on GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3>Employee Attendance Management System</h3>
+        <p>A web-based system for managing employee attendance, leave requests, and employee records. Includes separate admin and employee dashboards, attendance reports, department management, and check-in/check-out features.</p>
+        <div class="pc-tech">
+          <span>PHP</span><span>HTML</span><span>CSS</span><span>MySQL</span>
+        </div>
+        <div class="pc-bar"></div>
+        <a href="https://github.com/FarzanaBiji/Employee-Attendance-Management-System" class="pf-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Source Code</a>
+      </div>
+
+      <div class="proj-card tilt-card" data-aos="fade-up" data-aos-delay="180" style="--pc:#a855f7">
+        <div class="pc-top">
+          <div class="pc-emoji">🌍</div>
+          <div class="pc-links">
+            <a href="https://github.com/FarzanaBiji/AI-IN-TOURISM-AND-TRAVEL" target="_blank" rel="noopener noreferrer" aria-label="View AI in Tourism and Travel on GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3>AI in Tourism and Travel</h3>
+        <p>A Flask-based travel community application where travellers can explore hotels and attractions, create trips, and connect with solo travellers based on destination and travel dates. Includes role-based access, support features, and TF-IDF-based hotel recommendations.</p>
+        <div class="pc-tech">
+          <span>Python</span><span>Flask</span><span>Scikit-learn</span><span>TF-IDF</span>
+        </div>
+        <div class="pc-bar"></div>
+        <a href="https://github.com/FarzanaBiji/AI-IN-TOURISM-AND-TRAVEL" class="pf-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Source Code</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-right">Contact</div>
+    <div class="contact-grid">
+
+      <div class="contact-left" data-aos="fade-right" data-aos-delay="100">
+        <h2 class="sec-title">Let's Work<br><em>Together</em></h2>
+        <p class="contact-bio">
+          Whether you have a job offer, a freelance project, or just want to connect —
+          I'd love to hear from you. I typically respond within 24 hours.
+        </p>
+        <div class="contact-cards">
+          <div class="cc">
+            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+            <div class="cc-body">
+              <span>Email</span>
+              <a href="mailto:farzanabiji23@gmail.com">farzanabiji23@gmail.com</a>
+            </div>
+          </div>
+          <div class="cc">
+            <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="cc-body">
+              <span>Location</span>
+              <strong>Kerala, India</strong>
+            </div>
+          </div>
+          <div class="cc">
+            <div class="cc-icon"><i class="fas fa-circle-check"></i></div>
+            <div class="cc-body">
+              <span>Status</span>
+              <strong class="status-green">Open to Opportunities</strong>
+            </div>
+          </div>
+        </div>
+        <div class="contact-socials">
+          <a href="#" class="csoc" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="csoc" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="csoc" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="csoc" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right" data-aos="fade-left" data-aos-delay="200">
+        <form class="cform" id="contactForm"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST">
+          <input type="hidden" name="_subject" value="New Enquiry — Farzana Biji Portfolio"/>
+          <input type="hidden" name="_replyto" id="replyto" value=""/>
+          <input type="text"   name="_gotcha"  style="display:none"/>
+
+          <div class="cform-row">
+            <div class="cfield">
+              <label>Your Name <span>*</span></label>
+              <input type="text"  name="name"  placeholder="Jane Smith" required/>
+            </div>
+            <div class="cfield">
+              <label>Email <span>*</span></label>
+              <input type="email" name="email" id="cemail" placeholder="jane@company.com" required/>
+            </div>
+          </div>
+          <div class="cform-row">
+            <div class="cfield">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" name="phone" placeholder="+91 98765 43210"/>
+            </div>
+            <div class="cfield">
+              <label>Enquiry Type <span>*</span></label>
+              <select name="enquiry_type" required>
+                <option value="" disabled selected>Select…</option>
+                <option>💼 Job Offer / Hiring</option>
+                <option>🚀 Freelance Project</option>
+                <option>🤝 Collaboration</option>
+                <option>🎓 Internship</option>
+                <option>💬 General Inquiry</option>
+              </select>
+            </div>
+          </div>
+          <div class="cfield">
+            <label>Company / Organization</label>
+            <input type="text" name="company" placeholder="Your Company"/>
+          </div>
+          <div class="cfield">
+            <label>Subject <span>*</span></label>
+            <input type="text" name="subject" placeholder="e.g. Frontend Developer Role" required/>
+          </div>
+          <div class="cfield">
+            <label>Message <span>*</span></label>
+            <textarea name="message" rows="5" placeholder="Tell me about the opportunity or project…" required></textarea>
+          </div>
+
+          <button type="submit" class="cform-submit" id="cformBtn">
+            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+            <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending…</span>
+          </button>
+
+          <div class="cform-note">
+            <i class="fas fa-lock"></i>
+            Sent directly to <strong>farzanabiji23@gmail.com</strong>
+          </div>
+          <div class="cform-success" id="cformSuccess">
+            <i class="fas fa-check-circle"></i>
+            <div><strong>Message sent!</strong><span>I'll get back to you within 24 hours.</span></div>
+          </div>
+          <div class="cform-error" id="cformError">
+            <i class="fas fa-exclamation-circle"></i>
+            <div><strong>Oops!</strong><span>Try emailing me at <a href="mailto:farzanabiji23@gmail.com">farzanabiji23@gmail.com</a></span></div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-bracket">{</span>
+        <span class="logo-name">FB</span>
+        <span class="logo-bracket">}</span>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Farzana Biji. Built with passion &amp; ☕</p>
+      <p class="footer-made">Designed &amp; Developed by Farzana Biji</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
